@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Skeleton } from '@/components/ui/skeleton';
 
+
 export const HeroBannerSkeleton = () => (
   <div className="w-full h-[70vh] mb-8 overflow-hidden relative">
     <Skeleton className="w-full h-full absolute top-0 left-0 bg-gray-800" />
