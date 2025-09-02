@@ -1,12 +1,11 @@
 import { getSeasons } from "@/lib/actions/movies";
-import Link from "next/link";
-import type { Series} from "@/lib/types/datatypes";
+
 
 export default async function Page({params}: {params: Promise<{ id: number, season: number }>}) {
     const id = await params;
     const season = await getSeasons(id.id, id.season);
     console.log(season);
-    const episodes = season.episodes || [];
+
     return ( 
         <div className="container mx-auto p-4">
             <h1 className="text-3xl font-bold mb-4">{season.name}</h1>
