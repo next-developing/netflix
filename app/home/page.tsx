@@ -17,6 +17,7 @@ export default async function MoviesPage({ searchParams }: PageProps) {
     <MoviesPageClient 
       initialData={initialData}
       initialPage={currentPage}
+      
     />
   );
 }

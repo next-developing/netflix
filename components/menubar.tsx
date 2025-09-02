@@ -20,7 +20,7 @@ export default function SideBar() {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
   const [indicatorStyle, setIndicatorStyle] = useState<Partial<IndicatorStyle>>({});
   const navRef = useRef<HTMLElement>(null);
-  const itemsRef = useRef<(HTMLButtonElement | null)[]>([]);
+  const itemsRef = useRef<(HTMLAnchorElement | null)[]>([]);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -120,7 +120,7 @@ export default function SideBar() {
             <Link
                 href={`/${item.id}`}
               key={item.id}
-              ref={(el: HTMLButtonElement | null) => {
+              ref={(el: HTMLAnchorElement | null) => {
                 itemsRef.current[index] = el;
               }}
               className={`

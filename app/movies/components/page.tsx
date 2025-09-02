@@ -86,7 +86,7 @@ export default function HomePage() {
     {/* Главный баннер (первый фильм) */}
     <div className=" w-full h-[70vh] mb-8 overflow-hidden ">
       <img 
-        src={`https://image.tmdb.org/t/p/original${movies[0].backdrop_path || movies[0].poster_path}`}
+        src={`https://image.tmdb.org/t/p/original${movies[0].poster_path}`}
         alt={movies[0].title}
         className="w-full h-full object-cover absolute top-0 left-0"
       />

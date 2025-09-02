@@ -7,16 +7,17 @@ import { MoviesData } from '@/lib/types/datatypes';
 import Link from 'next/link';
 import Image from 'next/image';
 import { AnimatedMoviePageSkeleton } from '@/app/home/components/skeletons';
-
+import type { Movie } from '@/lib/types/datatypes';
 
 interface Props {
   initialData: MoviesData;
   initialPage: number;
+  movie?: Movie;
 }
 
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 
-export function MoviesPageClient({ initialData, initialPage }: Props) {
+export function MoviesPageClient({ initialData, initialPage, movie }: Props) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [currentPage, setCurrentPage] = useState(initialPage);
@@ -108,7 +109,7 @@ export function MoviesPageClient({ initialData, initialPage }: Props) {
 
     {/* Остальные фильмы в виде сетки */}
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-6 px-5 ">
-      {data.results.slice(1).map((movie) => (
+      {data.results.slice(1).map((movie: Movie) => (
         <Link 
           key={movie.id} 
           className="group bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition-transform duration-300"

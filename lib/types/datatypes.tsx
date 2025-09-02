@@ -24,6 +24,7 @@ interface Season {
   episode_count: number;
   poster_path: string;
   season_number: number;
+  overview: string;
 }
 interface Series {
   id: number;

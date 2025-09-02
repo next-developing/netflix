@@ -1,6 +1,7 @@
 import { getSeriesById } from "@/lib/actions/movies";
 import Link from "next/link";
 import Image from "next/image";
+import type { Season } from "@/lib/types/datatypes";
 
 export default async function Page({params}: {params: Promise<{ id: number }>}) {
     const id = await params;
@@ -41,7 +42,7 @@ export default async function Page({params}: {params: Promise<{ id: number }>}) 
             <div className="mt-8">
                 {seasons.length > 0 ? (
                     <div className="flex flex-row  gap-4">
-                        {seasons.map((season) => (
+                        {seasons.map((season: Season) => (
                             <Link key={season.id} className="bg-white rounded-lg shadow-md p-4"
                                 href={`/titleseries/${series.id}/${season.season_number}`}>
                                 {season.poster_path && (
