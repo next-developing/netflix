@@ -77,7 +77,18 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 }
-
+@font-face {
+  font-family: 'BDO Grotesk';
+  src: url('/fonts/BDOGrotesk-VF-BF648a657078401.ttf') format('truetype');
+  font-weight: 300 400 900;
+  font-display: swap;
+}
+@font-face { 
+  font-family: 'Prata';
+  src: url('/fonts/Prata-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -119,4 +130,14 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+.bdog { 
+  font-family: "BDO Grotesk", Arial, sans-serif;
+  font-weight: 400 !important;
+}
+.prata4 { 
+  font-family: "Prata", Arial, sans-serif;
+  font-weight: 400 !important; 
+line-height: 54.8px;
+
 }

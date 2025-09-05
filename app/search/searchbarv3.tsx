@@ -166,21 +166,21 @@ export default function SearchBar() {
       onKeyDown={handleKeyDown}
       onFocus={() => setShowSuggestions(query.length > 0)}
       placeholder="Title match search..."
-      className="w-full pl-4 pr-12 p-[6px] h-[56px] text-lg border-2 border-gray-300 rounded-sm
-                 outline-none transition-colors duration-200 focus:border-[rgb(108,221,215)] text-black bg-gray-800
+      className="w-full pl-4 pr-12 p-[6px] h-[56px] text-lg border-1 border-gray-600 rounded-sm
+                 outline-none transition-colors duration-200 backdrop-blur text-white bg-gray-800/40
                  
-                 placeholder-gray-400"
+                 placeholder-gray-200"
       autoComplete="off"
     />
     
     <button
       type="submit"
       className="absolute right-0 top-1/2 transform -translate-y-1/2
-                 bg-[rgb(108,221,215)] cursor-pointer text-white h-full px-6 py-1.5 rounded-br-sm rounded-tr-sm
+                  cursor-pointer text-white h-full px-6 py-1.5 rounded-br-sm rounded-tr-sm
                  transition-colors duration-200 flex items-center justify-center"
       disabled={!query.trim()}
     >
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
       </svg>
     </button>
