@@ -16,7 +16,7 @@ export default async function Page({params}: {params: Promise<{ id: number, seas
             <p className="text-gray-700 mb-4">{episode.still_path}</p>
             <p className="text-gray-700 mb-4">{episode.vote_average}</p>
             <p className="text-gray-700 mb-4">{episode.vote_count}</p>
-            <iframe src={`https://vidsrc.xyz/embed/tv?tmdb=${id.id}&season=${id.season}&episode=${id.episode}`} allowFullScreen></iframe>
+            <iframe src={`https://vidsrcme.ru/embed/tv?tmdb=${id.id}&season=${id.season}&episode=${id.episode}`} allowFullScreen></iframe>
         </div>
     )
 }

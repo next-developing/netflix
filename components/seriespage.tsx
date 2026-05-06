@@ -78,7 +78,7 @@ export default function NetflixStylePage({ seriesId, initialSeries }: SeriesPage
               ✕
             </button>
             <iframe
-              src={`https://vidsrc.xyz/embed/tv?tmdb=${seriesId}&season=${selectedSeason}&episode=${selectedEpisode}`}
+              src={`https://vidsrcme.ru/embed/tv?tmdb=${seriesId}&season=${selectedSeason}&episode=${selectedEpisode}`}
               allowFullScreen
               className="w-full h-full"
             />

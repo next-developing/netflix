@@ -6,7 +6,7 @@ export default async function Page({params}: {params: Promise<{ id: number }>}) 
     return (
         <div className="w-full h-screen bg-black">
             
-            <iframe src={`https://vidsrc.xyz/embed/movie?tmdb=${movie.id}`} allowFullScreen className="w-full h-screen"></iframe>
+            <iframe src={`https://vidsrcme.ru/embed/movie?tmdb=${movie.id}`} allowFullScreen className="w-full h-screen"></iframe>
         </div>
     );
 }
